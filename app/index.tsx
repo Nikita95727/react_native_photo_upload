@@ -13,7 +13,7 @@ export default function Gallery() {
 
   useEffect(() => {
     // Get photos
-    axios.get('http://192.168.50.239:3000/photos').then(res => {
+    axios.get(`${process.env.API_URL}/photos`).then(res => {
       setPhotos(res.data);
     }).catch(err => console.log(err))
   }, []);
