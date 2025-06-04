@@ -29,7 +29,7 @@ export default function TakePhoto() {
 
                     console.log(formData);
 
-                    await axios.post('http://192.168.50.239:3000/upload-photo', formData, {
+                    await axios.post(`${process.env.API_URL}/upload-photo`, formData, {
                         headers: {
                             'Content-Type': 'multipart/form-data'
                         }
